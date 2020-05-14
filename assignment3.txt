@@ -1,0 +1,18 @@
+1: Initate Swarm to assign manger:
+docker swarm init
+
+2:enter command docker swarm join-token worker
+get the toket copy paste
+
+3: worker1 is added and same for worker 2
+
+note: docker can be installed in 3 different EC2 insatnces as ref of nodes 1 (leader) and 2 for workers.
+
+to get the non root use priviliges:
+3: a) $ sudo groupadd docker- create docker group
+   b) $ sudo usermod -aG docker $USER- add user to docker group
+
+
+the users access can be checked by checking in the file: /va/run/docker.sock
+
+docker.sock is responsible for running enginer and the steps mentioned in step are followed to add user to docker group

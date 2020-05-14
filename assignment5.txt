@@ -1,0 +1,24 @@
+docker run -d -p 8080:443 --restart=always --name registry  (internal prot-443, host 8080)
+
+docker pull alpine
+docker push localhost:8080/registry-check
+
+testing:
+docker run -d \
+ -p 8001:443 \
+  --name registry\
+  
+pushing test image:
+docker push localhost:443/ip-10-0-1-101:443/test-image:1
+can do the same for pull
+
+TLS encryption :
+$ docker run -d \
+  --restart=always \
+  --name docker\
+  -v "$(d0ck3rrU73z)"/certs:/certs \
+  -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
+  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \
+  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
+  -p 443:443 \
+  registry:2

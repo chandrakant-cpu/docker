@@ -1,0 +1,5 @@
+docker swarm init (encryption and initialization)
+
+docker service scale products-fruit=5
+docker service create --name products-vegetables IMAGE linuxacademycontent/vegetable-service:1.0.0 image
+docker service image product-service -p 8081:80

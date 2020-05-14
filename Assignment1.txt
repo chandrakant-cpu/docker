@@ -1,0 +1,13 @@
+1: docker --version will give the version if it is installed
+2:$ sudo apt-get install docker-ce=5:18.09.5~3-0~ubuntu-bionic  docker-ce-cli=5:18.09.5~3-0~ubuntu-bionic containerd.io
+3: a) $ sudo groupadd docker- create docker group
+   b) $ sudo usermod -aG docker $USER- add user to docker group
+4: default logging server set to syslog
+a)sign in as root user
+b) go to /etc/docker locate .jason file. modify as per below:
+{
+  "log-driver": "syslog",
+  "log-opts": {
+    "syslog-address": "tcp://${SYSLOG_SERVER_IP}:514",
+  }
+}
