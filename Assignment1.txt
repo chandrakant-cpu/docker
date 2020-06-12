@@ -9,5 +9,7 @@ b) go to /etc/docker locate .jason file. modify as per below:
   "log-driver": "syslog",
   "log-opts": {
     "syslog-address": "tcp://${SYSLOG_SERVER_IP}:514",
+
+    ### that's fine
   }
 }
