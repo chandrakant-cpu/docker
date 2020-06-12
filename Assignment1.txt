@@ -10,6 +10,6 @@ b) go to /etc/docker locate .jason file. modify as per below:
   "log-opts": {
     "syslog-address": "tcp://${SYSLOG_SERVER_IP}:514",
 
-    ### that's fine
+    ### that's fine hurray
   }
 }
